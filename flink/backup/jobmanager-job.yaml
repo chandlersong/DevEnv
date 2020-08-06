@@ -13,8 +13,8 @@ spec:
       containers:
         - name: jobmanager
           image: flink:1.11.0-scala_2.11
-          env:
-          args: ["standalone-job", "--job-classname", "com.job.ClassName", <optional arguments>, <job arguments>] # optional arguments: ["--job-id", "<job id>", "--fromSavepoint", "/path/to/savepoint", "--allowNonRestoredState"]
+          env: []
+          args: ["standalone-job", "--job-classname", "com.job.ClassName"] # optional arguments: ["--job-id", "<job id>", "--fromSavepoint", "/path/to/savepoint", "--allowNonRestoredState"]
           ports:
             - containerPort: 6123
               name: rpc
